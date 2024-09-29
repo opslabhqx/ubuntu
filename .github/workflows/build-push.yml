@@ -60,12 +60,6 @@ jobs:
       - name: Extract version from Dockerfile
         id: extract_version
         run: |
-          echo "OWNER=${OWNER,,}" >> $GITHUB_ENV
-          echo "OWNER=${OWNER,,}"
-
-          echo "FILE=${FILE,,}" >> $GITHUB_ENV
-          echo "FILE=${FILE,,}"
-
           TAG=$(sed -n 's/^ARG BASE_VERSION=\([a-zA-Z]*\)\(@.*\)\?$/\1/p' Dockerfile)
           echo "TAG=${TAG#v}" >> $GITHUB_ENV
           echo "TAG=${TAG#v}"
