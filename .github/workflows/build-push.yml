@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.GH_SECRET }}
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@50ac8dd1e1b10d09dac7b8727528b91bed831ac0 # v3
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_ECR_PUBLIC }}
           role-session-name: "GitHubActions-${{ github.event.repository.owner.login }}-${{ github.event.repository.name }}-${{ github.run_id }}"
@@ -53,7 +53,7 @@ jobs:
 
       - name: Login to Amazon ECR
         id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
         with:
           registry-type: public
 
