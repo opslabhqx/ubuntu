@@ -61,6 +61,6 @@ target "push" {
     "ghcr.io/${OWNER}x/${FILE}",
     "ghcr.io/${OWNER}x/${FILE}:${TAG}",
     "public.ecr.aws/${OWNER}/${GROUP}/${FILE}",
-    "public.ecr.aws/${OWNER}/${GROUP}/${FILE}:${TAG}"
+    "public.ecr.aws/${OWNER}/${GROUP}/${FILE}:${TAG}",
   ]
 }

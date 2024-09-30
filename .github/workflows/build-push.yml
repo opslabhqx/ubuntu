@@ -61,8 +61,8 @@ jobs:
         id: extract_version
         run: |
           TAG=$(sed -n 's/^ARG BASE_VERSION=\([a-zA-Z]*\)\(@.*\)\?$/\1/p' Dockerfile)
-          echo "TAG=${TAG#v}" >> $GITHUB_ENV
-          echo "TAG=${TAG#v}"
+          echo "TAG=${TAG}" >> $GITHUB_ENV
+          echo "TAG=${TAG}"
 
       - name: Push
         uses: docker/bake-action@e626c7390c9f95508a135a89e65ec698e061fb2a # v5
