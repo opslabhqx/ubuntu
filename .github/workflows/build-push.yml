@@ -65,6 +65,6 @@ jobs:
           echo "TAG=${TAG}"
 
       - name: Push
-        uses: docker/bake-action@64673bcfac9f7517fc75e79db735fdb62efe6c55 # v5
+        uses: docker/bake-action@2e3d19baedb14545e5d41222653874f25d5b4dfb # v5
         with:
           targets: push
